@@ -5,4 +5,10 @@
     <string name="deskripsi">Deskripsi</string>
     <string name="todo">TODO</string>
     <string name="detail_jurusan">Detail Jurusan</string>
+    <string name="isi_email">isi_email</string>
+    <string name="label_email">label_email</string>
+    <string name="isi_website">isi_website</string>
+    <string name="label_website">label_website</string>
+    <string name="website">Website</string>
+    <string name="email">Email:</string>
 </resources>

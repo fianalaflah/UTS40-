@@ -4,63 +4,142 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/tv_item_image"
-        android:layout_width="125dp"
-        android:layout_height="113dp"
-        android:layout_gravity="left"
-        android:contentDescription="@string/todo"
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.156"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.08" />
+        app:layout_constraintVertical_bias="0.0">
 
-    <TextView
-        android:id="@+id/tv_detail_nama"
-        android:layout_width="132dp"
-        android:layout_height="79dp"
-        android:layout_gravity="start"
-        android:gravity="center"
-        android:text="@string/nama_fakultas"
-        android:textColor="@color/colorPrimary"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.684"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.102" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="24dp">
 
-    <TextView
-        android:id="@+id/tv_deskripsi"
-        android:layout_width="259dp"
-        android:layout_height="117dp"
-        android:layout_gravity="start"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="176dp"
-        android:gravity="left"
-        android:text="@string/deskripsi"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <LinearLayout
+                android:layout_width="331dp"
+                android:layout_height="118dp"
+                android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/tv_detail_jurusan"
-        android:layout_width="257dp"
-        android:layout_height="347dp"
-        android:layout_gravity="start"
-        android:layout_marginTop="8dp"
-        android:text="@string/detail_jurusan"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.292"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_deskripsi"
-        app:layout_constraintVertical_bias="0.086" />
+                <ImageView
+                    android:id="@+id/tv_item_image"
+                    android:layout_width="128dp"
+                    android:layout_height="107dp"
+                    android:contentDescription="@string/todo"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_deskripsi"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_detail_nama"
+                    app:layout_constraintHorizontal_bias="0.546"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.881" />
 
+                <TextView
+                    android:id="@+id/tv_detail_nama"
+                    android:layout_width="175dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="start"
+                    android:gravity="center"
+                    android:text="@string/nama_fakultas"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.703"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.098" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_deskripsi"
+                android:layout_width="334dp"
+                android:layout_height="69dp"
+                android:layout_gravity="start"
+                android:text="@string/deskripsi"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.282"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.242" />
+
+            <TextView
+                android:id="@+id/tv_detail_jurusan"
+                android:layout_width="334dp"
+                android:layout_height="98dp"
+                android:layout_gravity="start"
+                android:text="@string/detail_jurusan"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.421"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_deskripsi"
+                app:layout_constraintVertical_bias="0.014" />
+
+            <TextView
+                android:id="@+id/label_email"
+                android:layout_width="283dp"
+                android:layout_height="wrap_content"
+                android:text="@string/email"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.13"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_detail_jurusan"
+                app:layout_constraintVertical_bias="0.032" />
+
+            <TextView
+                android:id="@+id/isi_email"
+                android:layout_width="285dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:autoLink="email"
+                android:text="@string/isi_email"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.173"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/label_email"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/label_website"
+                android:layout_width="283dp"
+                android:layout_height="29dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/website"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.127"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/isi_email"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/isi_website"
+                android:layout_width="285dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:autoLink="web"
+                android:text="@string/isi_website"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.182"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/label_website"
+                app:layout_constraintVertical_bias="0.0" />
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

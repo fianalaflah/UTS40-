@@ -26,6 +26,9 @@ class MainActivity : AppCompatActivity() {
         showDetailActivityIntent.putExtra(Intent.EXTRA_INDEX, fakultasItem.deskripsiFakultas)
         showDetailActivityIntent.putExtra(Intent.EXTRA_TEXT, fakultasItem.jurusan)
         showDetailActivityIntent.putExtra(Intent.EXTRA_CHOSEN_COMPONENT, fakultasItem.image)
+        showDetailActivityIntent.putExtra(Intent.EXTRA_EMAIL, fakultasItem.email)
+        showDetailActivityIntent.putExtra(Intent.EXTRA_ORIGINATING_URI, fakultasItem.website)
+
         //Menjalankan Activity showDetailActivityIntent
         startActivity(showDetailActivityIntent)
     }
